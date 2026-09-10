@@ -1,0 +1,31 @@
+# docker-compose.yml
+services:
+  app:
+    build: .
+    image: bump-and-go-desktop
+    container_name: bump_and_go_desktop_container
+    ports:
+      - "6080:6080"   # noVNC (browser)
+    environment:
+      - USER=ubuntu   # optional: create non-root user
+      - PASSWORD=ubuntu
+      - TURTLEBOT3_MODEL=burger
+    shm_size: 2gb
+    volumes:
+      - ./ros2_ws:/ros2_ws   # edit & build your code live in the container
+
+
+#services:
+#  app:
+#    build: .
+#    image: bump-and-go-desktop
+#    container_name: bump_and_go_desktop_container
+#    shm_size: 2gb
+#    ports:
+#      - "6080:6080"        # open http://localhost:6080
+#    environment:
+#      - TURTLEBOT3_MODEL=burger
+#      - START_CODE=1     # uncomment to auto-open VS Code
+#      - START_FIREFOX=1  # uncomment to auto-open Firefox
+#    volumes:
+#      - ./ros2_ws:/ros2_ws   # edit & build your code live in the container

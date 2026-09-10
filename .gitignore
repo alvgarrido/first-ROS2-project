@@ -1,0 +1,38 @@
+# =========================
+# ROS 2 / colcon artifacts
+# =========================
+ros2_ws/build/
+ros2_ws/install/
+ros2_ws/log/
+
+# Sometimes colcon/pip leave these around
+**/*.egg-info/
+**/*.egg
+**/__pycache__/
+*.py[cod]
+
+# Python tooling
+.venv/
+venv/
+.mypy_cache/
+.pytest_cache/
+.tox/
+
+# Logs
+*.log
+
+# Editors/IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Docker & env
+.env
+
+ros2_ws/src/turtlebot3_simulations/
+
