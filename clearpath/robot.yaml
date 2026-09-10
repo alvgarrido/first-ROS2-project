@@ -1,0 +1,14 @@
+# ~/clearpath/robot.yaml
+# Este archivo le dice al simulador de Clearpath qué robot construir.
+platform:
+  # El modelo de la plataforma base sigue siendo el Jackal (j100)
+  model: j100
+
+  # SECCIÓN CRÍTICA QUE FALTABA:
+  # Le decimos qué sistema de control usar.
+  control:
+    # El nombre del paquete de ROS 2 que contiene el controlador
+    package: clearpath_control
+    # El nombre del controlador específico para la tracción diferencial
+    controller: diff_drive_controller
+
